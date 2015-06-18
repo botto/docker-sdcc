@@ -22,7 +22,9 @@ WORKDIR /gputils-code/gputils
 RUN ./configure
 RUN make
 RUN make install
+WORKDIR /
 RUN svn checkout svn://svn.code.sf.net/p/sdcc/code/tags/sdcc-3.5.0-pre1 sdcc
 WORKDIR /sdcc/sdcc
 RUN ./configure
 RUN make
+RUN make install
